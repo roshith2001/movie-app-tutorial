@@ -11,11 +11,11 @@ import './App.css';
 
 function App() {
   const [movies, setMovies] = useState([]);
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState('black');
   const [favourite, setFavourite] = useState([]);
 
   const getMovieRequest = async(searchValue) => {
-    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=7c1820d`;
+    const url = `https://www.omdbapi.com/?s=${searchValue}&apikey=7c1820d`;
     const response = await fetch(url);
     const responseJson = await response.json();
 
